@@ -1,6 +1,6 @@
 ## R Programs
 
-## References
+## references
 
 * [The R Project](https://www.r-project.org/)
 
@@ -29,7 +29,7 @@ str(choice_factor_levels)
 
 ```
 
-### Dates in R
+### dates in R
 
 * Dates are represented by the Date class
 * Times are represented by the POSIXct and POSIXlt class
@@ -43,4 +43,44 @@ unclass(x)
 
 >> [1] "1970-01-01"
 ```
+
+### names() function 
+
+```R
+
+remain <- c (11,12,11,13)
+suits <- c("spades", "hearts", "diamonds", "clubs")
+names(remain) <-suits
+str(remain)
+# vectors are of the same type
+print(is.vector(remain))
+print(remain)
+
+ Named num [1:4] 11 12 11 13
+ - attr(*, "names")= chr [1:4] "spades" "hearts" "diamonds" "clubs"
+[1] TRUE
+  spades   hearts diamonds    clubs 
+      11       12       11       13 
+```
+### coercion for vectors
+
+* R automatically converts types 
+
+```R
+
+drawn_ranks <- c(7,4,"A",10,"K",3,2,"Q")
+print(drawn_ranks)
+print(class(drawn_ranks))
+
+using GNU R Version 3.5.0 (2018-04-23)
+   
+[1] "7"  "4"  "A"  "10" "K"  "3"  "2"  "Q" 
+[1] "character"
+```
+
+
+
+
+
+
 
